@@ -1,0 +1,22 @@
+<div>
+    <label>Username</label>                
+      <input                
+        (blur)="onUsernameBlur()"
+        name="username"
+        placeholder="Username"  
+      />
+      <div *ngIf="usernameError" class="text-danger">
+        <span [innerHTML]="highlightedUsername || user.username"></span> <!-- Display highlighted banned word in username -->
+        <div>{{ usernameError }}</div>
+      </div>    
+  </div>
+
+  <!--   
+  CSS class - change as you like
+
+  .highlight-red {
+    color: red;
+    font-weight: bold;
+    }
+    
+  -->
